@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#D10069</color>
+
+    <color name="pink">#D10069</color>
+    <color name="dongker">#21363f</color>
+    <color name="abu2">#EAEAEA</color>
+
+
+    <color name="dot_inactive_screen1">#6F7ABC</color>
+    <color name="dot_inactive_screen2">#6F7ABC</color>
+    <color name="dot_inactive_screen3">#6F7ABC</color>
+    <color name="dot_inactive_screen4">#6F7ABC</color>
+    <!-- dots active colors -->
+    <color name="dot_active_screen1">#D10069</color>
+    <color name="dot_active_screen2">#D10069</color>
+    <color name="dot_active_screen3">#D10069</color>
+    <color name="dot_active_screen4">#D10069</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_active_screen1</item>
+        <item>@color/dot_active_screen2</item>
+        <item>@color/dot_active_screen3</item>
+        <item>@color/dot_active_screen4</item>
+    </array>
+    <array name="array_dot_inactive">
+        <item>@color/dot_inactive_screen1</item>
+        <item>@color/dot_inactive_screen2</item>
+        <item>@color/dot_inactive_screen3</item>
+        <item>@color/dot_inactive_screen4</item>
+    </array>
+
+</resources>

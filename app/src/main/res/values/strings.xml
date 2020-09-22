@@ -1,0 +1,119 @@
+<resources>
+    <string name="app_name">Simetalia 1</string>
+    <string name="splash_aplikasi"><![CDATA[APLIKASI SISTEM INFORMASI\n & PEMETAAN DIGITAL\n IBU HAMIL]]></string>
+    <string name="splash_copyright">Copyright @2020 Cikara Studio</string>
+    <string name="next">Next</string>
+    <string name="start">GOT IT</string>
+    <string name="simetalia_1">SIMETALIA 1</string>
+
+    <string name="masukan_akun">Masukan Akun</string>
+    <string name="silahkan_login_terlebih_dahulu_untuk_masuk_ke_sistem_kami">Silahkan login terlebih dahulu untuk masuk ke sistem kami</string>
+    <string name="masukan_data_ibu_n_hamil">Masukan Data Ibu\n Hamil</string>
+    <string name="silahkan_input_data_ibu_hamil">Silahkan input data ibu hamil</string>
+    <string name="masukan_data_kunjungan_baru">Masukan Data Kunjungan Baru</string>
+    <string name="silahkan_input_data_ibu_hamil_n_yang_baru_berkunjung">Silahkan input data ibu hamil\n yang baru berkunjung</string>
+    <string name="masukan_data_kunjungan_lama">Masukan Data Kunjungan Lama</string>
+    <string name="silahkan_input_data_ibu_hamil_yang_telah_berkunjung">Silahkan input data ibu hamil\n yang telah berkunjung</string>
+    <string name="login">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="silahkan_login_sesuai_dengan_akun_yang_telah_diberikan">Silahkan login sesuai dengan akun\n yang telah diberikan…</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="beranda">Beranda</string>
+    <string name="data_bumil">Data Bumil</string>
+    <string name="profile">Profile</string>
+    <string name="peta_ibu_hamil">Peta Ibu Hamil</string>
+    <string name="google_maps">Google Maps</string>
+    <string name="jumlah_kehamilan">Jumlah Kehamilan</string>
+    <string name="jumlah_kohort">Jumlah KRST</string>
+    <string name="pemeriksaan_hari_ini">Pemeriksaan Hari ini</string>
+    <string name="tambah_bumil">Tambah Bumil</string>
+    <string name="search">Search.......</string>
+    <string name="form_tambah_bumil">Form Tambah Bumil</string>
+    <string name="no_nik">No NIK</string>
+    <string name="nama_bumil">Nama Bumil</string>
+    <string name="tempat_lahir">Tempat Lahir</string>
+    <string name="tanggal_lahir">Tanggal Lahir</string>
+    <string name="gol_darah">Gol Darah</string>
+    <string name="agama">Agama</string>
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="simpan">Simpan data</string>
+    <string name="detail_ibu_hamil">Detail Ibu Hamil</string>
+    <string name="hapus_data">Hapus Data</string>
+    <string name="detail_ibu">Detail Ibu</string>
+    <string name="detail_suami">Detail Suami</string>
+    <string name="detail_keluarga">Detail Keluarga</string>
+    <string name="detail_peta">Detail Peta</string>
+    <string name="kunjungan">Kunjungan</string>
+    <string name="no">No</string>
+    <string name="resiko">Resiko</string>
+    <string name="tambah_kunjungan_baru">Tambah Kunjungan Baru</string>
+    <string name="data_kunjungan_baru">Data Kunjungan Baru</string>
+    <string name="form_kunjungan_baru">Form Kunjungan Baru</string>
+    <string name="tanggal_kunjungan">Tanggal Kunjungan</string>
+    <string name="keluhan_utama">Keluhan Utama</string>
+    <string name="keluhan_tambahan">Keluhan Tambahan</string>
+    <string name="riwayat_pernikahan">Riwayat Pernikahan</string>
+    <string name="riwayat_penyakit_yang_diderita">Riwayat Penyakit Yang Diderita</string>
+    <string name="riwayat_penyakit_keluarga">Riwayat Penyakit Keluarga</string>
+    <string name="riwayat_alergi">Riwayat Alergi</string>
+    <string name="jumlah_anak_hidup">Jumlah Anak Hidup</string>
+    <string name="jumlah_lahir_mati">Jumlah Lahir Mati</string>
+    <string name="jumlah_anak_lahir_prematur">Jumlah Anak Lahir Prematur</string>
+    <string name="persalinan_keguguran_terakhir">Persalinan/Keguguran Terakhir</string>
+    <string name="penolong_persalinan_terakhir">Penolong Persalinan Terakhir</string>
+    <string name="komplikasi">Komplikasi</string>
+    <string name="apakah_ber_kb_sebelum_hamil">Apakah Ber-KB Sebelum Hamil</string>
+    <string name="jenis_kontrasepsi">Jenis Kontrasepsi</string>
+    <string name="apakah_pernah_mendapatkan_suntikan_tt">Apakah Pernah Mendapatkan Suntikan TT?</string>
+    <string name="waktu_diberikan">Waktu Diberikan TT</string>
+    <string name="gravida">Gravida</string>
+    <string name="mulai_ada_gerakan_janin">Mulai Ada Gerakan Janin</string>
+    <string name="lain_lain">Lain-Lain</string>
+
+
+    <string-array name="jk">
+        <item>laki-laki</item>
+        <item>perempuan</item>
+    </string-array>
+
+    <string-array name="agama">
+        <item>Islam</item>
+        <item>Protestan</item>
+        <item>Katolik</item>
+        <item>Hindu</item>
+        <item>Budha</item>
+        <item>Khonghucu</item>
+    </string-array>
+
+    <string-array name="goldarah">
+        <item>Belum Dicek</item>
+        <item>A</item>
+        <item>B</item>
+        <item>AB</item>
+        <item>O</item>
+    </string-array>
+
+    <string-array name="pendidikan">
+        <item>Tidak Sekolah</item>
+        <item>SD</item>
+        <item>SMP/MTS</item>
+        <item>SMA/SMK/MA</item>
+        <item>Akademi</item>
+        <item>Perguruan Tinggi</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+    <string name="peta_dinas_kesehatan">Puskesmas Cimaragas</string>
+    <string name="edit_nakes">Edit Nakes</string>
+    <string name="logout">Keluar</string>
+    <string name="edit_ibu_hamil">Edit Ibu Hamil</string>
+    <string name="data_suami">Data Suami</string>
+    <string name="data_nakes">Data Nakes</string>
+    <string name="hamil_pertama_n_16_tahun"><![CDATA[Hamil Pertama\n <=16 tahun]]></string>
+    <string name="hamil_lagi_n_2tahun"><![CDATA[Hamil lagi\n=<2tahun]]></string>
+    <string name="terlalu_pendek_n_145cm"><![CDATA[Terlalu Pendek\n<=145cm]]></string>
+
+</resources>
