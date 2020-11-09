@@ -1,110 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.EditIbuHamilActivity">
+    android:scrollbars="none"
+    tools:context=".activity.bumil.EditIbuHamilActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/btn_backEditBumil"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_keyboard_arrow_left_24_putih"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_md"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:src="@drawable/icon_detail_ibu_hamil"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/btn_backEditBumil"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_detailIbuHamil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:fontFamily="@font/futura"
-        android:text="@string/edit_ibu_hamil"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/icon_detail_ibu_hamil"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/futura"
-        android:text="@string/edit_ibu_hamil"
-        android:textColor="@color/pink"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.04000002" />
+        <TextView
+            android:id="@+id/tv_detailIbuHamil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/futura"
+            android:text="@string/edit_ibu_hamil"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura"
+            android:text="@string/edit_ibu_hamil"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.04000002" />
 
-    <Button
-        android:id="@+id/btn_updateDataBumil"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:background="@drawable/btn_simpan"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:fontFamily="@font/futura"
-        android:padding="10dp"
-        android:text="@string/simpan"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11">
+        <ImageView
+            android:id="@+id/btn_toggleEditBumil"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/icon_pencil"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView11">
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -114,12 +105,11 @@
                 <TextView
                     android:id="@+id/tv1"
                     android:layout_width="100dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
+                    android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="NIK"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -129,29 +119,16 @@
                     android:id="@+id/tv_editBumilNIK"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="3207295304930001"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilNIK"
-                    app:layout_constraintStart_toEndOf="@+id/tv1"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageView
-                    android:id="@+id/btn_editBumilNIK"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
+                    android:paddingStart="17dp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv1"
                     app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -160,7 +137,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -171,11 +148,10 @@
                     android:id="@+id/tv2"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Nama"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -185,37 +161,25 @@
                     android:id="@+id/tv_editBumilNama"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="Rahmi"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:paddingStart="17dp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilNama"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv2"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <ImageView
-                    android:id="@+id/btn_editBumilNama"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -226,11 +190,10 @@
                     android:id="@+id/tv3"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
-                    android:text="Tempat\nLahir"
+                    android:gravity="center_vertical"
+                    android:text="Tempat Lahir"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -240,37 +203,25 @@
                     android:id="@+id/tv_editBumilTempatLahir"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="ciamis"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:paddingStart="17dp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilTempatLahir"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv3"
                     app:layout_constraintTop_toTopOf="parent" />
 
-
-                <ImageView
-                    android:id="@+id/btn_editBumilTempatLahir"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -281,156 +232,41 @@
                     android:id="@+id/tv4"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
-                    android:text="Tanggal\nLahir"
+                    android:gravity="center_vertical"
+                    android:text="Tanggal Lahir"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-                <EditText
+                <com.santalu.maskara.widget.MaskEditText
                     android:id="@+id/tv_editBumilTglLahir"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="1999-11-17"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:hint="HH-BB-TTTT"
+                    android:inputType="number"
+                    android:paddingStart="17dp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilTglLahir"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv4"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mask="__-__-____" />
 
-
-                <ImageView
-                    android:id="@+id/btn_editBumilTglLahir"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv5"
-                    android:layout_width="100dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="20dp"
-                    android:text="Golongan\nDarah"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <EditText
-                    android:id="@+id/tv_editBumilGolDarah"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@android:color/transparent"
-                    android:cursorVisible="false"
-                    android:enabled="false"
-                    android:focusable="false"
-                    android:hint="A"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilGolDarah"
-                    app:layout_constraintStart_toEndOf="@+id/tv5"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/btn_editBumilGolDarah"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/tv6"
-                    android:layout_width="100dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="20dp"
-                    android:text="Agama"
-                    android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <EditText
-                    android:id="@+id/tv_editBumilAgama"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
-                    android:background="@android:color/transparent"
-                    android:cursorVisible="false"
-                    android:enabled="false"
-                    android:focusable="false"
-                    android:hint="islam"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilAgama"
-                    app:layout_constraintStart_toEndOf="@+id/tv6"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <ImageView
-                    android:id="@+id/btn_editBumilAgama"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -441,11 +277,10 @@
                     android:id="@+id/tv7"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Pekerjaan"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -454,35 +289,104 @@
                     android:id="@+id/tv_editBumilPekerjaan"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="irt"
-                    android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:paddingStart="17dp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilPekerjaan"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv7"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/btn_editBumilPekerjaan"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@android:color/darker_gray"/>
+                android:background="@android:color/darker_gray" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv5"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Golongan Darah"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <Spinner
+                    android:id="@+id/sp_editBumilGolDarah"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv5"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv6"
+                    android:layout_width="100dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
+                    android:text="Agama"
+                    android:textColor="@android:color/darker_gray"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <Spinner
+                    android:id="@+id/sp_editBumilAgama"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="false"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv6"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -493,46 +397,69 @@
                     android:id="@+id/tv8"
                     android:layout_width="100dp"
                     android:layout_height="35dp"
-                    android:layout_gravity="center_vertical"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Pendidikan"
                     android:textColor="@android:color/darker_gray"
-                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <EditText
-                    android:id="@+id/tv_editBumilPendidikan"
+                <Spinner
+                    android:id="@+id/sp_editBumilPendidikan"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginHorizontal="10dp"
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
                     android:focusable="false"
-                    android:hint="SMP/MTS"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
+                    android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/btn_editBumilPendidikan"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/tv8"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <ImageView
-                    android:id="@+id/btn_editBumilPendidikan"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginEnd="30dp"
-                    android:src="@drawable/icon_pencil"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/btn_updateDataBumil"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_green"
+                android:fontFamily="@font/futura"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ly12">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_simpan_putih" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/futura"
+                    android:text="Simpan Data"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
 
         </LinearLayout>
 
-    </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+

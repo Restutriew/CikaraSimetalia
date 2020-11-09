@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cikarastudio.cikarasimetalia">
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -14,82 +15,11 @@
         android:icon="@mipmap/ic_launcher_simetalia"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:windowSoftInputMode="stateVisible|adjustResize"
         android:roundIcon="@mipmap/ic_launcher_simetalia_round"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity
-            android:name=".activity.TambahDataScreeningActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataRujukanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataP4KActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataPerencanaanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataPlanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataAnalisisActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataObyektifActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganLamaDataSubyektifActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataSubyektifActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.TambahDataKunjunganLamaActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.DataKunjunganLamaActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.DetailKunjunganLamaActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataRujukanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataP4KActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataPerencanaanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataPlanActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataAnalisisActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditKunjunganBaruDataObyektifActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.DetailKunjunganBaruActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditDataNakesActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditDataPetaActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditDataKeluargaActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditDataSuamiActivity"
-            android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".activity.EditIbuHamilActivity"
-            android:windowSoftInputMode="adjustPan" />
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="stateVisible|adjustResize">
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -103,33 +33,114 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".maps.BumilMapsActivity"
+            android:label="@string/title_activity_bumil_maps"></activity>
+        <activity android:name=".activity.nifas.TambahDataNifasActivity" />
+        <activity android:name=".activity.kunjunganlama.DataKunjunganLamaActivity" />
+        <activity android:name=".activity.nifas.EditDataNifasActivity" />
+        <activity android:name=".activity.nifas.DetailDataNifasActivity" />
+        <activity android:name=".activity.bayi.TambahDataBayiActivity" />
+        <activity android:name=".activity.kehamilan.TambahDataPersalinanActivity" />
+        <activity
+            android:name=".activity.skrinning.TambahDataScreeningActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataRujukanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataP4KActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.EditKunjunganLamaDataPerencanaanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataPlanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataAnalisisActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataObyektifActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.EditKunjunganLamaDataSubyektifActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataSubyektifActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.TambahDataKunjunganLamaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.DataKunjunganLamaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganlama.DetailKunjunganLamaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataRujukanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataP4KActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.EditKunjunganBaruDataPerencanaanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataPlanActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataAnalisisActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.EditKunjunganBaruDataObyektifActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.kunjunganbaru.DetailKunjunganBaruActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.bumil.EditDataNakesActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.bumil.EditDataPetaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.bumil.EditDataKeluargaActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.bumil.EditDataSuamiActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activity.bumil.EditIbuHamilActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".maps.MapsActivity"
             android:label="@string/title_activity_maps"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.TambahDataKunjunganBaruActivity"
+            android:name=".activity.kunjunganbaru.TambahDataKunjunganBaruActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".activity.DataKunjunganBaruActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.DetailBumilActivity"
+            android:name=".activity.bumil.DetailBumilActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.TambahDataIbuHamilActivity"
+            android:name=".activity.bumil.TambahDataIbuHamilActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.MainActivity"
+            android:name=".activity.home.MainActivity"
             android:label="@string/title_activity_main"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.LoginActivity"
+            android:name=".activity.login.LoginActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.IntroActivity"
+            android:name=".activity.intro.IntroActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
-            android:name=".activity.SplashCikaraActivity"
+            android:name=".activity.intro.SplashCikaraActivity"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -138,7 +149,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.SplashActivity"
+            android:name=".activity.intro.SplashActivity"
             android:windowSoftInputMode="adjustPan" />
     </application>
 

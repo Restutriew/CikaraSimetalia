@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.cikarastudio.cikarasimetalia.activity.LoginActivity;
-import com.cikarastudio.cikarasimetalia.activity.MainActivity;
+import com.cikarastudio.cikarasimetalia.activity.login.LoginActivity;
+import com.cikarastudio.cikarasimetalia.activity.home.MainActivity;
 
 import java.util.HashMap;
 
@@ -62,4 +62,5 @@ public class SessionManager {
         context.startActivity(i);
         ((MainActivity) context).finish();
     }
+
 }

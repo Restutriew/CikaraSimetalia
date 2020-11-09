@@ -72,7 +72,7 @@
         android:id="@+id/btn_updateDataPerencanaanLama"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:background="@drawable/btn_simpan"
+        android:background="@drawable/btn_pink"
         android:drawableLeft="@drawable/ic_baseline_save_24"
         android:fontFamily="@font/futura"
         android:padding="10dp"
@@ -109,7 +109,7 @@
                 android:background="@android:color/darker_gray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@id/constraint" />
+                 />
 
 
             <androidx.constraintlayout.widget.ConstraintLayout

@@ -6,7 +6,13 @@
 
     <color name="pink">#D10069</color>
     <color name="dongker">#21363f</color>
-    <color name="abu2">#EAEAEA</color>
+
+    <color name="biru_muda">#50F6F7</color>
+
+    <color name="hijau">#136700</color>
+    <color name="pinkgelap">#930049</color>
+
+
 
 
     <color name="dot_inactive_screen1">#6F7ABC</color>

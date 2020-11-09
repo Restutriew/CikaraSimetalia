@@ -7,12 +7,12 @@
     <string name="simetalia_1">SIMETALIA 1</string>
 
     <string name="masukan_akun">Masukan Akun</string>
-    <string name="silahkan_login_terlebih_dahulu_untuk_masuk_ke_sistem_kami">Silahkan login terlebih dahulu untuk masuk ke sistem kami</string>
+    <string name="silahkan_login_terlebih_dahulu_untuk_masuk_ke_sistem_kami">Silahkan login terlebih dahulu untuk\nmasuk ke sistem kami</string>
     <string name="masukan_data_ibu_n_hamil">Masukan Data Ibu\n Hamil</string>
     <string name="silahkan_input_data_ibu_hamil">Silahkan input data ibu hamil</string>
-    <string name="masukan_data_kunjungan_baru">Masukan Data Kunjungan Baru</string>
+    <string name="masukan_data_kunjungan_baru">Masukan Data\nKunjungan Baru</string>
     <string name="silahkan_input_data_ibu_hamil_n_yang_baru_berkunjung">Silahkan input data ibu hamil\n yang baru berkunjung</string>
-    <string name="masukan_data_kunjungan_lama">Masukan Data Kunjungan Lama</string>
+    <string name="masukan_data_kunjungan_lama">Masukan Data\nKunjungan Lama</string>
     <string name="silahkan_input_data_ibu_hamil_yang_telah_berkunjung">Silahkan input data ibu hamil\n yang telah berkunjung</string>
     <string name="login">Masuk</string>
     <string name="email">Email</string>
@@ -81,12 +81,12 @@
     </string-array>
 
     <string-array name="agama">
-        <item>Islam</item>
-        <item>Protestan</item>
-        <item>Katolik</item>
-        <item>Hindu</item>
-        <item>Budha</item>
-        <item>Khonghucu</item>
+        <item>islam</item>
+        <item>protestan</item>
+        <item>katolik</item>
+        <item>hindu</item>
+        <item>budha</item>
+        <item>khonghucu</item>
     </string-array>
 
     <string-array name="goldarah">
@@ -105,6 +105,210 @@
         <item>Akademi</item>
         <item>Perguruan Tinggi</item>
     </string-array>
+
+    <string-array name="status_ekonomi">
+        <item>mampu</item>
+        <item>tidak mampu</item>
+    </string-array>
+
+    <string-array name="status_bpjs">
+        <item>ya</item>
+        <item>tidak</item>
+        <item>lainnya</item>
+    </string-array>
+
+    <string-array name="tolong_salin">
+        <item>nakes</item>
+        <item>non nakes</item>
+    </string-array>
+
+    <string-array name="cara_salin">
+        <item>spontan</item>
+        <item>tindakan</item>
+    </string-array>
+
+    <string-array name="kb_sebelum_hml">
+        <item>ya</item>
+        <item>tidak</item>
+    </string-array>
+
+    <string-array name="suntikan_tt">
+        <item>tidak pernah</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="keadaan_umum">
+        <item>baik</item>
+        <item>sakit sedang</item>
+        <item>sakit berat</item>
+    </string-array>
+
+    <string-array name="kesadaran">
+        <item>cm</item>
+        <item>delirium</item>
+        <item>koma</item>
+    </string-array>
+
+    <string-array name="ya_tidak">
+        <item>ya</item>
+        <item>tidak</item>
+    </string-array>
+
+    <string-array name="vulva">
+        <item>vulva</item>
+        <item>vagina</item>
+    </string-array>
+
+    <string-array name="pos_neg">
+        <item>positif</item>
+        <item>negatif</item>
+    </string-array>
+
+    <string-array name="jum_obat">
+        <item>30</item>
+        <item>60</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+
+    <string-array name="yang_ke">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="tempat_salin">
+        <item>faskes</item>
+        <item>non faskes</item>
+    </string-array>
+
+    <string-array name="kendaraan">
+        <item>roda 2</item>
+        <item>roda 4</item>
+    </string-array>
+
+    <string-array name="kepemilikan">
+        <item>pemerintah</item>
+        <item>pribadi</item>
+        <item>sewa</item>
+    </string-array>
+
+    <string-array name="biaya_salin">
+        <item>asuransi</item>
+        <item>umum</item>
+        <item>ktm</item>
+    </string-array>
+
+    <string-array name="calon_donor">
+        <item>suami</item>
+        <item>keluarga</item>
+        <item>orang lain</item>
+    </string-array>
+
+    <string-array name="faskes">
+        <item>Rumah Sakit</item>
+        <item>Rumah Bersalin</item>
+        <item>Klinik Swasta</item>
+        <item>Puskesmas Poned</item>
+        <item>Puskesmas Non Poned</item>
+    </string-array>
+
+    <string-array name="tanda_vital">
+        <item>td</item>
+        <item>pulsa</item>
+        <item>respirasi</item>
+    </string-array>
+
+    <string-array name="normal_tdk">
+        <item>normal</item>
+        <item>tidak normal</item>
+    </string-array>
+
+    <string-array name="ada_tdk">
+        <item>ada</item>
+        <item>tidak ada</item>
+    </string-array>
+
+    <string-array name="keras_lnk">
+        <item>keras</item>
+        <item>lunak</item>
+    </string-array>
+
+    <string-array name="lochea">
+        <item>rubra</item>
+        <item>sangulenta</item>
+        <item>serosa</item>
+        <item>alba</item>
+    </string-array>
+
+    <string-array name="cukup_tdk">
+        <item>cukup</item>
+        <item>tidak cukup</item>
+    </string-array>
+
+    <string-array name="kapsul_vita">
+        <item>1 kap</item>
+        <item>2 kap</item>
+    </string-array>
+
+    <string-array name="tablet_fe">
+        <item>30 tab</item>
+        <item>60 tab</item>
+        <item>90 tab</item>
+    </string-array>
+
+    <string-array name="tidak_ya">
+        <item>tidak</item>
+        <item>ya</item>
+    </string-array>
+
+    <string-array name="tidak">
+        <item>tidak</item>
+    </string-array>
+
+    <string-array name="ya">
+        <item>ya</item>
+    </string-array>
+
+    <string-array name="penolong">
+        <item>Tenaga Kesehatan Dokter</item>
+        <item>Tenaga Kesehatan Bidan</item>
+        <item>Dukun Terlatih</item>
+        <item>Dukun Tidak Terlatih</item>
+    </string-array>
+
+    <string-array name="tempat_persalinan">
+        <item>ponek</item>
+        <item>poned</item>
+    </string-array>
+
+    <string-array name="jenis_persalinan">
+        <item>normal</item>
+        <item>spontan</item>
+    </string-array>
+
+    <string-array name="tindakan_persalinan">
+        <item>seksiosesaria</item>
+        <item>vakum ekstraksi</item>
+        <item>forsep ekstrasi</item>
+        <item>induksi</item>
+        <item>lain-lain</item>
+    </string-array>
+
+    <string-array name="keadaan_ibu_persalinan">
+        <item>sehat</item>
+        <item>sakit</item>
+        <item>meninggal</item>
+    </string-array>
+
+
+
     <string name="title_activity_maps">Map</string>
     <string name="peta_dinas_kesehatan">Puskesmas Cimaragas</string>
     <string name="edit_nakes">Edit Nakes</string>
@@ -115,5 +319,6 @@
     <string name="hamil_pertama_n_16_tahun"><![CDATA[Hamil Pertama\n <=16 tahun]]></string>
     <string name="hamil_lagi_n_2tahun"><![CDATA[Hamil lagi\n=<2tahun]]></string>
     <string name="terlalu_pendek_n_145cm"><![CDATA[Terlalu Pendek\n<=145cm]]></string>
+    <string name="title_activity_bumil_maps">Map</string>
 
 </resources>

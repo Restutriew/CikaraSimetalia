@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:layout_marginBottom="10dp"
+    android:focusableInTouchMode="true"
+    android:scrollbars="none">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_backKunjungan"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/futura"
+            android:text="Form Nifas"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura"
+            android:text="Data Nifas"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+        <LinearLayout
+            android:id="@+id/lyly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tanggal Kunjungan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/et_tambahNifasTanggalKunjungan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/futura"
+                android:hint="HH-BB-TTTT"
+                android:inputType="number"
+                android:padding="10dp"
+                app:mask="__-__-____" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kunjunga Ke-"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasKunjunganKe"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/calibri"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Keluhan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasKeluhan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Keadaan Umum"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambaNifasKeadaanUmum"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kesadaran"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasKesadaran"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tanda Vital"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasTandaVital"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Pendarahan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasPendarahan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kondisi Perineum"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahKondisiPerineum"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tanda Infeksi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasTandaInfeksi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kondisi Uterus"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasKondisiUterus"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="TFU"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasTFU"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Lochea"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasLochea"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Jalan Lahir"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasJalanLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Payudara"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasPayudara"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Produksi ASI"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasProduksiASI"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kapsul Vitamin"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasKapsulVita"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tablet FE"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasTabletFE"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Postpartum"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasPostpartumKe3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Hasil Postpartum"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasHasilPostpartumKe3"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Kontrasepsi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasKontrasepsi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Jenis Kontrasepsi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasJenisKontrasepsi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Komplikasi"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasKomplikasi"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Buang Air Besar"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasBAB"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Buang Air Kecil"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambahNifasBAK"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Komplikasi Nifas"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasKomplikasiNifas"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Asuhan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasAsuhan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Konseling"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasKonseling"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tanggal Rujukan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/et_tambahNifasTanggalRujukan"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/futura"
+                android:hint="HH-BB-TTTT"
+                android:inputType="number"
+                android:padding="10dp"
+                app:mask="__-__-____" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Faskes"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <Spinner
+                android:id="@+id/sp_tambaNifasFaskes"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Nama Faskes"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasNamaFaskes"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Alasan Dirujuk"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasAlasanDirujuk"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Diagnosa Sementara"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasDiagnosaSementara"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Tindakan Sementara"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahNifasTindakanSementara"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/btn_tambahNifas"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_green"
+            android:fontFamily="@font/futura"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyly">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_simpan_putih" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/futura"
+                android:text="Simpan Data"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

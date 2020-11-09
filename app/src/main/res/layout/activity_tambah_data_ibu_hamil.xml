@@ -1,240 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginBottom="10dp"
     android:clickable="true"
     android:focusable="true"
     android:focusableInTouchMode="true">
 
-    <ImageView
-        android:id="@+id/imageView8"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/form_input_bumil" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/btn_back"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:fontFamily="@font/futura"
-        android:text="@string/form_tambah_bumil"
-        android:textColor="@color/pink"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_simpanDataBumil"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:background="@drawable/btn_simpan"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:fontFamily="@font/futura"
-        android:padding="10dp"
-        android:text="@string/simpan"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="170dp"
-        app:cardCornerRadius="25dp"
-        app:cardElevation="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <ImageView
+            android:id="@+id/imageView8"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_md"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/futura"
+            android:text="@string/form_tambah_bumil"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/futura"
+            android:text="Identitas Ibu Hamil"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+
+        <LinearLayout
+            android:id="@+id/lyly"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView8">
 
             <TextView
-                android:id="@+id/textView8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:fontFamily="@font/futura"
-                android:text="Identitas Ibu Hamil"
-                android:textColor="@color/pink"
-                android:textSize="20sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@string/no_nik"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-            <ScrollView
+            <EditText
+                android:id="@+id/et_tambahBumilNoNik"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/calibri"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/nama_bumil"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahBumilNamaBumil"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/calibri"
+                android:padding="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/tempat_lahir"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_tambahBumilTempatLahir"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:padding="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/tanggal_lahir"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <com.santalu.maskara.widget.MaskEditText
+                android:id="@+id/et_tambahBumilTglLahir"
                 android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8">
+                android:layout_height="40dp"
+                android:fontFamily="@font/futura"
+                android:background="@drawable/input_bumil"
+                android:hint="HH-BB-TTTT"
+                android:inputType="number"
+                android:padding="10dp"
+                app:mask="__-__-____" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/gol_darah"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/no_nik"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+            <Spinner
+                android:id="@+id/et_tambahBumilGolDarah"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:focusableInTouchMode="false" />
 
-                    <EditText
-                        android:id="@+id/et_tambahBumilNoNik"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_bumil"
-                        android:fontFamily="@font/calibri"
-                        android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/agama"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/nama_bumil"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+            <Spinner
+                android:id="@+id/et_tambahBumilAgama"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:fontFamily="@font/calibri" />
 
-                    <EditText
-                        android:id="@+id/et_tambahBumilNamaBumil"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_bumil"
-                        android:fontFamily="@font/calibri"
-                        android:padding="12dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="@string/pekerjaan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/tempat_lahir"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
+            <EditText
+                android:id="@+id/et_tambahBumilPekerjaan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_bumil"
+                android:fontFamily="@font/calibri"
+                android:padding="12dp" />
 
-                    <EditText
-                        android:id="@+id/et_tambahBumilTempatLahir"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_bumil"
-                        android:padding="10dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/futura"
+                android:text="Pendidikan"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/tanggal_lahir"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <EditText
-                        android:id="@+id/et_tambahBumilTglLahir"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_bumil"
-                        android:drawableEnd="@drawable/ic_baseline_calendar_today_24"
-                        android:drawableRight="@drawable/ic_baseline_calendar_today_24"
-                        android:focusableInTouchMode="false"
-                        android:fontFamily="@font/calibri"
-                        android:padding="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/gol_darah"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <Button
-                        android:id="@+id/et_tambahBumilGolDarah"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_option"
-                        android:focusableInTouchMode="false" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/agama"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <Spinner
-                        android:id="@+id/et_tambahBumilAgama"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_option"
-                        android:fontFamily="@font/calibri" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="@string/pekerjaan"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <EditText
-                        android:id="@+id/et_tambahBumilPekerjaan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_bumil"
-                        android:fontFamily="@font/calibri"
-                        android:padding="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/futura"
-                        android:text="Pendidikan"
-                        android:textColor="@android:color/black"
-                        android:textSize="16sp" />
-
-                    <Spinner
-                        android:id="@+id/et_tambahBumilPendidikan"
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:background="@drawable/input_option"
-                        android:fontFamily="@font/calibri" />
-                </LinearLayout>
-            </ScrollView>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+            <Spinner
+                android:id="@+id/et_tambahBumilPendidikan"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/input_option"
+                android:fontFamily="@font/calibri" />
+        </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/btn_tambahDataBumil"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/btn_green"
+            android:fontFamily="@font/futura"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyly">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_simpan_putih" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/futura"
+                android:text="Simpan Data"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

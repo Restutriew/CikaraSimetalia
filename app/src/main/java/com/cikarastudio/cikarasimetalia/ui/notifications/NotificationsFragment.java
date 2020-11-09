@@ -1,21 +1,17 @@
 package com.cikarastudio.cikarasimetalia.ui.notifications;
 
-import android.content.ContentResolver;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.util.Base64;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -30,17 +26,14 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.cikarastudio.cikarasimetalia.R;
-import com.cikarastudio.cikarasimetalia.activity.EditDataNakesActivity;
+import com.cikarastudio.cikarasimetalia.activity.bumil.EditDataNakesActivity;
 import com.cikarastudio.cikarasimetalia.dialog.LoadingDialog;
 import com.cikarastudio.cikarasimetalia.session.SessionManager;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -58,12 +51,12 @@ public class NotificationsFragment extends Fragment {
     LoadingDialog loadingDialog;
     SessionManager sessionManager;
     CircleImageView img_photoprofile;
-    Button btn_logout, btn_edit_nakes,btn_updatedataUser;
+    LinearLayout btn_updatedataUser, btn_edit_nakes, btn_logout;
     String id_user;
     EditText tv_profileEditTelp, tv_profileEditEmail, tv_profileEditPassword, tv_profileEditAlamat, tv_profileEditNama;
     ImageView btn_imgEditName, btn_imgEditTelp, btn_imgEditEmail, btn_imgEditPassword, btn_imgEditAlamat, btn_editImg;
     private Bitmap bitmap;
-    private static String URL_UPDATE = "http://simetalia.com/android/update_user.php";
+    private static final String URL_UPDATE = "http://simetalia.com/android/update_user.php";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -254,8 +247,6 @@ public class NotificationsFragment extends Fragment {
     }
 
 
-
-
     private void updateDetail() {
         loadingDialog.startLoading();
 //        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
@@ -286,7 +277,7 @@ public class NotificationsFragment extends Fragment {
                             JSONObject jsonObject = new JSONObject(response);
                             String success = jsonObject.getString("success");
 
-                            if (success.equals("1")){
+                            if (success.equals("1")) {
                                 Toast.makeText(getContext(), "Update Berhasil! ", Toast.LENGTH_SHORT).show();
                                 loadingDialog.dissmissDialog();
                             }
@@ -303,22 +294,21 @@ public class NotificationsFragment extends Fragment {
                 , new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getContext(), "Update Gagal: Jaringan Terganggu "+error.toString(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Update Gagal: Jaringan Terganggu " + error.toString(), Toast.LENGTH_SHORT).show();
                 loadingDialog.dissmissDialog();
             }
-        })
-        {
+        }) {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("id",id_user);
+                params.put("id", id_user);
                 params.put("name", name);
-                params.put("telp",telp);
-                params.put("email",email);
-                params.put("password",password);
-                params.put("alamat",alamat);
+                params.put("telp", telp);
+                params.put("email", email);
+                params.put("password", password);
+                params.put("alamat", alamat);
 //                params.put("avatar",avatar);
-                params.put("tanggal_sekarang",tgl_sekarang);
+                params.put("tanggal_sekarang", tgl_sekarang);
 
                 return params;
             }
@@ -331,7 +321,7 @@ public class NotificationsFragment extends Fragment {
 
 
     private void load_dataBooking() {
-        String URL_READBOOKING = "http://simetalia.com/pkm/webservice/nakes/"+id_user;
+        String URL_READBOOKING = "http://simetalia.com/pkm/webservice/nakes/" + id_user;
         StringRequest stringRequest = new StringRequest(Request.Method.GET, URL_READBOOKING,
                 new Response.Listener<String>() {
                     @Override

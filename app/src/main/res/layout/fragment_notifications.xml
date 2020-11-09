@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.NotificationsFragment">
+    tools:context=".ui.notifications.NotificationsFragment"
+    android:layout_marginBottom="60dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="120dp"
         android:scaleType="fitXY"
-        android:src="@drawable/header"
+        android:src="@drawable/bg_home_sm"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -19,49 +24,34 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/futura"
-        android:text="@string/simetalia_1"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:src="@drawable/icon_profile_putih"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/imageView9"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo_simetalia1" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:fontFamily="@font/futura"
-        android:text="@string/profile"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/calibri"
+        android:text="Sistem Informasi Dan\nPemetaan Digital Ibu Hamil"
         android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/imageView9"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="70dp"
         android:src="@drawable/frame_photo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +59,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_photoProfile"
-        android:layout_width="110dp"
-        android:layout_height="110dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:src="@android:color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5"
@@ -79,34 +69,48 @@
 
     <ImageView
         android:id="@+id/btn_editPhoto"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:src="@drawable/icon_edit_photo"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="@+id/imageView5" />
 
-    <Button
+    <LinearLayout
         android:id="@+id/btn_edit_nakes"
-        android:layout_width="110dp"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/button_tutorial"
-        android:drawableLeft="@drawable/ic_baseline_edit_24"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_pink"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:padding="5dp"
-        android:text="@string/edit_nakes"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_updateDataUser">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_baseline_edit_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/futura"
+            android:text="Edit Nakes"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
 
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -114,8 +118,8 @@
 
     <ImageView
         android:id="@+id/nama"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/icon_profile2"
@@ -136,7 +140,6 @@
         android:focusable="false"
         android:hint="*********"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/view2"
         app:layout_constraintEnd_toStartOf="@+id/btn_imgEditname"
         app:layout_constraintStart_toEndOf="@+id/nama"
@@ -144,8 +147,8 @@
 
     <ImageView
         android:id="@+id/btn_imgEditname"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:src="@drawable/icon_pencil"
@@ -165,8 +168,8 @@
 
     <ImageView
         android:id="@+id/no_hp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/icon_telp"
@@ -188,7 +191,6 @@
         android:hint="*********"
         android:inputType="number"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="@+id/view4"
         app:layout_constraintEnd_toStartOf="@+id/btn_imgEdittlp"
         app:layout_constraintStart_toEndOf="@+id/no_hp"
@@ -196,8 +198,8 @@
 
     <ImageView
         android:id="@+id/btn_imgEdittlp"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:src="@drawable/icon_pencil"
@@ -217,8 +219,8 @@
 
     <ImageView
         android:id="@+id/email"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/icon_email"
@@ -239,7 +241,6 @@
         android:focusable="false"
         android:hint="*********"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/view5"
         app:layout_constraintEnd_toStartOf="@+id/btn_imgEditEmail"
         app:layout_constraintStart_toEndOf="@+id/email"
@@ -247,8 +248,8 @@
 
     <ImageView
         android:id="@+id/btn_imgEditEmail"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:src="@drawable/icon_pencil"
@@ -268,8 +269,8 @@
 
     <ImageView
         android:id="@+id/jeniskelamin"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/ic_baseline_lock_24"
@@ -290,7 +291,6 @@
         android:focusable="false"
         android:hint="*********"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/view6"
         app:layout_constraintEnd_toStartOf="@+id/btn_imgEditpassword"
         app:layout_constraintStart_toEndOf="@+id/jeniskelamin"
@@ -298,8 +298,8 @@
 
     <ImageView
         android:id="@+id/btn_imgEditpassword"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
         android:src="@drawable/icon_pencil"
@@ -319,8 +319,8 @@
 
     <ImageView
         android:id="@+id/alamat"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:src="@drawable/icon_alamat"
@@ -341,15 +341,14 @@
         android:focusable="false"
         android:hint="*********"
         android:textColor="@android:color/black"
-        android:textSize="16sp"
         app:layout_constraintEnd_toStartOf="@+id/btn_imgEditAlamat"
         app:layout_constraintStart_toEndOf="@+id/alamat"
         app:layout_constraintTop_toBottomOf="@+id/view6" />
 
     <ImageView
         android:id="@+id/btn_imgEditAlamat"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
@@ -357,35 +356,63 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tv_profileEditAlamat" />
 
-    <Button
-        android:id="@+id/btn_updateDataUser"
-        android:layout_width="110dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/btn_simpan"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:fontFamily="@font/futura"
-        android:padding="5dp"
-        android:text="@string/simpan"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-    <Button
-        android:id="@+id/btn_logout"
-        android:layout_width="100dp"
+    <LinearLayout
+        android:id="@+id/btn_updateDataUser"
+        android:layout_width="0dp"
         android:layout_height="30dp"
-        android:background="@drawable/button_tutorial"
-        android:drawableLeft="@drawable/ic_baseline_exit_to_app_24"
-        android:padding="5dp"
-        android:text="@string/logout"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/btn_green"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_profileEditAlamat" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_profileEditAlamat">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_simpan_putih" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/futura"
+            android:text="Simpan Data"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_logout"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/btn_red"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_nakes">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/icon_keluar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/futura"
+            android:text="Keluar"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,123 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.EditIbuHamilActivity">
+    tools:context=".activity.bumil.EditDataNakesActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/header"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/btn_backEditNakes"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginLeft="24dp"
-        android:layout_marginTop="24dp"
-        android:src="@drawable/ic_baseline_keyboard_arrow_left_24_putih"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_md"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:src="@drawable/icon_edit_nakes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/btn_backEditNakes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_detailIbuHamil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:fontFamily="@font/futura"
-        android:text="@string/data_nakes"
-        android:textColor="@android:color/white"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:src="@drawable/icon_edit_nakes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/futura"
-        android:text="Edit Data Nakes"
-        android:textColor="@color/pink"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        app:layout_constraintVertical_bias="0.04000002" />
+        <TextView
+            android:id="@+id/tv_detailIbuHamil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:fontFamily="@font/futura"
+            android:text="@string/data_nakes"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6" />
 
-    <Button
-        android:id="@+id/btn_updateDataNakes"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:background="@drawable/btn_simpan"
-        android:drawableLeft="@drawable/ic_baseline_save_24"
-        android:fontFamily="@font/futura"
-        android:padding="10dp"
-        android:text="@string/simpan"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="100dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.521">
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/futura"
+            android:text="Edit Data Nakes"
+            android:textColor="@color/pink"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4"
+            app:layout_constraintVertical_bias="0.04000002" />
 
         <LinearLayout
+            android:id="@+id/ly12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/textView11">
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/no_hp"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Kode Pengenal"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -135,7 +113,6 @@
                     android:focusable="false"
                     android:hint="*********"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_imgEditNakesNIP"
                     app:layout_constraintStart_toEndOf="@+id/no_hp"
@@ -143,8 +120,8 @@
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesNIP"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -155,18 +132,18 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/email"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Tempat Lahir"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -184,7 +161,6 @@
                     android:focusable="false"
                     android:hint="*********"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_imgEditNakesTempatLahir"
                     app:layout_constraintStart_toEndOf="@+id/email"
@@ -192,8 +168,8 @@
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesTempatLahir"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -201,23 +177,22 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/email1"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
-                    android:text="Tanggal Lahir\nThn-Bln-Tgl"
+                    android:gravity="center_vertical"
+                    android:text="Tanggal Lahir"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -231,21 +206,20 @@
                     android:background="@android:color/transparent"
                     android:cursorVisible="false"
                     android:enabled="false"
-                    android:inputType="number"
-                    app:mask="____-__-__"
                     android:focusable="false"
                     android:hint="*********"
+                    android:inputType="number"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_imgEditNakesTglLahir"
                     app:layout_constraintStart_toEndOf="@+id/email1"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:mask="____-__-__" />
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesTglLahir"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -256,18 +230,18 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/jk"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Jenis Kelamin"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -285,7 +259,6 @@
                     android:focusable="false"
                     android:hint="*********"
                     android:textColor="@android:color/black"
-                    android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/btn_imgEditNakesJK"
                     app:layout_constraintStart_toEndOf="@+id/jk"
@@ -293,8 +266,8 @@
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesJK"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -305,18 +278,18 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/agama"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Agama"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -342,8 +315,8 @@
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesAgama"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -355,18 +328,18 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="10dp"
                 android:background="@android:color/darker_gray" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp">
+                android:layout_height="35dp">
 
                 <TextView
                     android:id="@+id/almtPraktek"
                     android:layout_width="100dp"
                     android:layout_height="30dp"
                     android:layout_marginStart="20dp"
+                    android:gravity="center_vertical"
                     android:text="Almt Praktek"
                     android:textColor="@android:color/darker_gray"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -392,8 +365,8 @@
 
                 <ImageView
                     android:id="@+id/btn_imgEditNakesAlamatPraktek"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/icon_pencil"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -401,8 +374,41 @@
                     app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
         </LinearLayout>
 
-    </ScrollView>
+        <LinearLayout
+            android:id="@+id/btn_updateDataNakes"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_green"
+            android:fontFamily="@font/futura"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ly12">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_simpan_putih" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/futura"
+                android:text="Simpan Data"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

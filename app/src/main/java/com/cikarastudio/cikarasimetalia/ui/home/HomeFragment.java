@@ -1,5 +1,6 @@
 package com.cikarastudio.cikarasimetalia.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,10 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -25,18 +24,11 @@ import com.anychart.AnyChartView;
 import com.anychart.chart.common.dataentry.DataEntry;
 import com.anychart.chart.common.dataentry.ValueDataEntry;
 import com.anychart.charts.Pie;
+import com.cikarastudio.cikarasimetalia.maps.BumilMapsActivity;
+import com.cikarastudio.cikarasimetalia.maps.MapsActivity;
 import com.cikarastudio.cikarasimetalia.R;
 import com.cikarastudio.cikarasimetalia.dialog.LoadingDialog;
 import com.cikarastudio.cikarasimetalia.session.SessionManager;
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapView;
-import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.CameraPosition;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.MarkerOptions;
-import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,16 +37,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class HomeFragment extends Fragment implements OnMapReadyCallback {
+public class HomeFragment extends Fragment {
 
     TextView tv_berandaDataBumil, tv_berandaJumlahKehamilan, tv_berandaJumlahKRST, tv_berandaPemeriksaanHariIni;
     LoadingDialog loadingDialog;
     SessionManager sessionManager;
     String id_user;
-    GoogleMap mMap;
-    MapView mMapView;
     View root;
     AnyChartView anyChartViewResiko, anyChartViewBPJS;
+    CardView petaPuskesmas,petaBumil;
 
     String[] jenisResiko = {"KRST", "KRT", "KRR"};
     int[] jumlahResiko = {112, 223, 800};
@@ -71,15 +62,34 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         HashMap<String, String> user = sessionManager.getUserDetail();
         id_user = user.get(sessionManager.ID);
 
+        loadingDialog = new LoadingDialog(getActivity());
+        loadingDialog.startLoading();
+
         tv_berandaDataBumil = root.findViewById(R.id.tv_berandaDataBumil);
         tv_berandaJumlahKehamilan = root.findViewById(R.id.tv_berandaJumlahKehamilan);
         tv_berandaJumlahKRST = root.findViewById(R.id.tv_berandaJumlahKRST);
         tv_berandaPemeriksaanHariIni = root.findViewById(R.id.tv_berandaPemeriksaanHariIni);
+        petaPuskesmas = root.findViewById(R.id.petaPuskesmas);
+        petaBumil = root.findViewById(R.id.petaBumil);
 
-        loadingDialog = new LoadingDialog(getActivity());
-        loadingDialog.startLoading();
+        petaPuskesmas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent kePetaPuskesmas = new Intent(getActivity(), MapsActivity.class);
+                startActivity(kePetaPuskesmas);
+            }
+        });
+
+        petaBumil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent kePetaBumil = new Intent(getActivity(), BumilMapsActivity.class);
+                startActivity(kePetaBumil);
+            }
+        });
 
         load_dataBeranda();
+
 
         anyChartViewResiko = root.findViewById(R.id.chartResiko);
         APIlib.getInstance().setActiveAnyChartView(anyChartViewResiko);
@@ -90,7 +100,6 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         setupchartBPJS();
 
         return root;
-
 
     }
 
@@ -167,28 +176,4 @@ public class HomeFragment extends Fragment implements OnMapReadyCallback {
         anyChartViewResiko.setChart(pie);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        mMapView = (MapView) root.findViewById(R.id.map);
-        if (mMapView != null) {
-            mMapView.onCreate(null);
-            mMapView.onResume();
-            mMapView.getMapAsync(this);
-        }
-
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-//        mMap.setMapStyle(googleMap);
-
-        // Add a marker in Sydney and move the camera
-
-        mMap.addMarker(new MarkerOptions().position(new LatLng(-7.328082, 108.366358)).title("Dinas Kesehatan Kabupaten Ciamis"));
-        CameraPosition sydney = CameraPosition.builder().target(new LatLng(-7.328082, 108.366358)).zoom(16).tilt(45).build();
-        mMap.moveCamera(CameraUpdateFactory.newCameraPosition(sydney));
-    }
 }

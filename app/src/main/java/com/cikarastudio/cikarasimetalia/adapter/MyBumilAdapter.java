@@ -1,6 +1,7 @@
 package com.cikarastudio.cikarasimetalia.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -46,16 +47,27 @@ public class MyBumilAdapter extends RecyclerView.Adapter<MyBumilAdapter.MyBumilV
     @Override
     public void onBindViewHolder(@NonNull final MyBumilViewHolder holder, int position) {
         Bumil currentItem = mBumilList.get(position);
-
-        String id_bumil = currentItem.getId_bumil();
         String nama_bumil = currentItem.getNama();
         String no_nik = currentItem.getNik();
         String resiko = currentItem.getResiko();
 
-//        holder.id_booking.setText(id_booking);
+        if ("KRR".equals(resiko)) {
+            holder.resiko.setBackgroundColor(Color.parseColor("#31CE36"));
+            holder.resiko.setText(resiko);
+        } else if ("KRT".equals(resiko)) {
+            holder.resiko.setBackgroundColor(Color.parseColor("#FFAD46"));
+            holder.resiko.setText(resiko);
+        } else if ("KRST".equals(resiko)) {
+            holder.resiko.setBackgroundColor(Color.parseColor("#F1676F"));
+            holder.resiko.setText(resiko);
+        }else {
+            holder.resiko.setBackgroundColor(Color.parseColor("#000000"));
+            holder.resiko.setText("Belum Ada Data");
+        }
+
         holder.nama.setText(nama_bumil);
         holder.no_nik.setText(no_nik);
-        holder.resiko.setText(resiko);
+
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,6 +92,7 @@ public class MyBumilAdapter extends RecyclerView.Adapter<MyBumilAdapter.MyBumilV
         public TextView nama;
         public TextView no_nik;
         public TextView resiko;
+
         MyBumilViewHolder(@NonNull View itemView) {
             super(itemView);
             nama = itemView.findViewById(R.id.namaBumil);
